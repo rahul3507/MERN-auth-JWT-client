@@ -22,6 +22,14 @@ export const AppContextProvider = (props) => {
     }
   };
 
+  const getAuthState = async () => {
+    try {
+      const { data } = await axios.get(backendUrl + "/api/auth/is-auth");
+    } catch (error) {
+      toast.error(error.message);
+    }
+  };
+
   const value = {
     backendUrl,
     isLoggedin,
