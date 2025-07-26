@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const {userData,backendUrl,setUserData,setIsLoggedIn}
   return (
     <div className="w-full flex justify-between items-center p-4 sm:p-6 sm:px-24 absolute top-0">
       <img src={assets.logo} alt="logo" className="w-28 sm:w-32" />
